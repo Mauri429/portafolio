@@ -14,7 +14,7 @@ export const profile = {
   ],
   skills: ['Redes TCP/IP y diagnóstico de conectividad', 'Windows, Windows Server y Linux/Ubuntu', 'Soporte de hardware y software', 'JavaScript / TypeScript, React y Node.js', 'SQL, PostgreSQL y MySQL', 'Git/GitHub — Mauri429', 'Docker', 'DNS/DHCP y servicios de red'],
   additional: ['Inglés intermedio', 'Libreta de conducir Cat. A', 'Referencias laborales disponibles a solicitud.'],
-  greeting: 'HOLA, SOY MAURICIO', initials: 'MS',
+  greeting: 'HOLA, SOY', initials: 'MS',
   introduction: 'Bienvenido a mi escritorio. Un espacio para conocer mi perfil, explorar mis proyectos y encontrar nuevas formas de conectar.',
   technologies: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'MySQL', 'Docker', 'Git'], interests: ['Redes', 'Software', 'Tecnología'],
 };
