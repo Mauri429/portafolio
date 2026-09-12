@@ -1,0 +1,2 @@
+import { useEffect, useRef } from 'react';
+export function useGameLoop(callback: (dt:number)=>void, active=true){const latest=useRef(callback);latest.current=callback;useEffect(()=>{if(!active)return;let frame=0,last=performance.now();const loop=(now:number)=>{latest.current(Math.min(.05,(now-last)/1000));last=now;frame=requestAnimationFrame(loop);};frame=requestAnimationFrame(loop);return()=>cancelAnimationFrame(frame);},[active]);}

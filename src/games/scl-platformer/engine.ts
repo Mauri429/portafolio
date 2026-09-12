@@ -1,0 +1,4 @@
+import type { Level,Rect } from './levels';export type Player={x:number;y:number;vx:number;vy:number;w:number;h:number;grounded:boolean};
+export const hit=(a:Rect,b:Rect)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
+export function spawn():Player{return{x:45,y:270,vx:0,vy:0,w:25,h:36,grounded:false};}
+export function updatePlayer(p:Player,level:Level,keys:Set<string>,dt:number){const prevY=p.y;p.vx=(Number(keys.has('ArrowRight')||keys.has('d'))-Number(keys.has('ArrowLeft')||keys.has('a')))*190;if((keys.has(' ')||keys.has('w')||keys.has('ArrowUp'))&&p.grounded){p.vy=-390;p.grounded=false;}p.vy=Math.min(650,p.vy+900*dt);p.x=Math.max(0,Math.min(2375-p.w,p.x+p.vx*dt));p.y+=p.vy*dt;p.grounded=false;for(const platform of level.platforms){if(hit(p,platform)&&prevY+p.h<=platform.y+5&&p.vy>=0){p.y=platform.y-p.h;p.vy=0;p.grounded=true;}}return p;}
