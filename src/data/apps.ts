@@ -1,9 +1,10 @@
-import { FaUserCircle, FaTerminal, FaGithub, FaLinkedin, FaFolderOpen, FaAddressCard, FaTrashAlt, FaGamepad, FaCog, FaBomb, FaTableTennis, FaThLarge, FaRocket, FaNetworkWired, FaFileCode } from 'react-icons/fa';
+import { FaUserCircle, FaTerminal, FaGithub, FaLinkedin, FaFolderOpen, FaAddressCard, FaTrashAlt, FaGamepad, FaCog, FaBomb, FaTableTennis, FaThLarge, FaRocket, FaNetworkWired, FaFileCode, FaCalendarAlt } from 'react-icons/fa';
 import { profile } from '../config/profile';
 import type { AppDefinition } from '../types';
 export const apps: AppDefinition[] = [
   { id: 'about', image: 'icons/tango/apps-system-users.png', label: 'Sobre mí', icon: FaUserCircle, color: 'blue' },
   { id: 'cv', label: 'Mi CV', icon: FaTerminal, color: 'terminal' },
+  { id: 'onday', image: 'icons/calendar.png', label: 'OnDay', icon: FaCalendarAlt, color: 'paper', start: false, inactive: true },
   { id: 'projects', image: 'icons/tango/places-folder.png', label: 'Proyectos', icon: FaFolderOpen, color: 'yellow' },
   { id: 'github', label: 'GitHub', icon: FaGithub, color: 'ink', external: profile.github },
   { id: 'linkedin', label: 'LinkedIn', icon: FaLinkedin, color: 'blue', external: profile.linkedin },
