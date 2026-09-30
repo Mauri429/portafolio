@@ -1,0 +1,9 @@
+.onday-app { background: #fff8f4; color: #292830; min-height: 100%; }
+.onday-promo { display: block; width: 100%; height: auto; }
+.onday-download-banner { position: relative; }
+/* Click target follows the printed button at every image size. */
+.onday-download { position: absolute; left: 20.6%; top: 51.8%; width: 31.1%; height: 17.8%; border-radius: 999px; }
+.onday-download:hover { background: #ffffff20; box-shadow: 0 0 0 2px #fff9; }
+.onday-download:focus-visible { outline: 3px solid #1b4e9f; outline-offset: 3px; }
+.onday-download-help { padding: 12px 16px; text-align: center; font-size: .85rem; }
+.onday-download-help a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; }

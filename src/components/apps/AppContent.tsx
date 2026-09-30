@@ -7,6 +7,7 @@ import { ProjectsApp } from './ProjectsApp';
 import { ContactApp } from './ContactApp';
 import { DocumentsApp } from './DocumentsApp';
 import { GamesApp } from './GamesApp';
+import { OnDayApp } from './OnDayApp';
 import { AppErrorBoundary } from './AppErrorBoundary';
 
 const gameComponents: Partial<Record<AppId, LazyExoticComponent<ComponentType>>> = {
@@ -26,6 +27,7 @@ export function AppContent({ id, open, explore, dark, setDark }: { id: AppId; op
   else switch (id) {
     case 'about': content = <AboutApp open={open} explore={explore} />; break;
     case 'cv': content = <CVApp />; break;
+    case 'onday': content = <OnDayApp />; break;
     case 'projects': content = <ProjectsApp />; break;
     case 'contact': content = <ContactApp />; break;
     case 'documents': content = <DocumentsApp />; break;
